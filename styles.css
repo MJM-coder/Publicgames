@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  margin: 1em 0;
+}
+
+.colour-box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 0 1em;
+}
+
+.instructions {
+  text-align: left;
+}
+
+ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+select, input[type="range"] {
+  margin-left: 10px;
+}

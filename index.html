@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColourMatch Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Abi's Colour Match Game</h1>
+    
+    <div class="row">
+      <div class="colour-box" id="target-colour-box"></div>
+      <div class="colour-box" id="player-colour-box"></div>
+    </div>
+
+    <div class="row">
+      <label for="red-slider">Red:</label>
+      <input type="range" id="red-slider" name="red-slider" min="0" max="255">
+    </div>
+
+    <div class="row">
+      <label for="green-slider">Green:</label>
+      <input type="range" id="green-slider" name="green-slider" min="0" max="255">
+    </div>
+
+    <div class="row">
+      <label for="blue-slider">Blue:</label>
+      <input type="range" id="blue-slider" name="blue-slider" min="0" max="255">
+    </div>
+
+    <div class="row">
+      <button id="start-reset-button" onclick="startResetGame()">Start/Reset</button>
+    </div>
+
+    <div class="row">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty" name="difficulty">
+        <option value="expert">Expert</option>
+        <option value="medium">Medium</option>
+        <option value="easy">Easy</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="timer">Time:</label>
+      <span id="timer">00:00</span>
+    </div>
+  </div>
+  <div class="row">
+  <p class="instructions">
+    Match the target colour by adjusting the RGB sliders. RGB colour values for each of red, green and blue range from 0 to 255. The objective is to match the colour in the shortest time possible. The difficulty level determines the tolerance allowed for matching the colour:
+    <ul>
+      <li>Expert: The colour must be matched exactly.</li>
+      <li>Medium: The colour must be within 20 units of the target values for each RGB component.</li>
+      <li>Easy: The colour must be within 50 units of the target values for each RGB component.</li>
+    </ul>
+  </p>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
